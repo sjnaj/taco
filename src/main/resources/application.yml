@@ -1,0 +1,60 @@
+server:
+  port: 0
+  #random available port
+
+  # ssl:
+  #   key-store: classpath:mykeys.jks
+  #   key-store-password: fengsc2017
+  #   key-password: fengsc2017
+  # access using this form https://localhost:56075/
+
+
+spring:
+  application:
+    name: Taco
+  # 使用 export SPRING_PROFILES_ACTIVE=prod运行时激活
+  # config:
+  #   activate:
+  #     on-profile: prod
+      
+  datasource:
+    url: jdbc:mysql://localhost:3306/taco?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: fengsc2017
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:sql/data.sql 
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+        use-sql-comments: true
+
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  main:
+    allow-bean-definition-overriding: true
+  messages:
+    basename: messages
+    encoding: utf-8
+
+logging:
+  file:
+    path: /var/logs
+    name: TacoCloud.log
+    # default clear once reach 10MB
+
+  level:
+    root: WARN
+    org:
+    springframework: 
+      security: DEBUG
+
+taco:
+  orders:
+    pageSize: 10

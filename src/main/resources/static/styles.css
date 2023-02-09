@@ -1,0 +1,44 @@
+.grid {
+    columns: 2;
+}
+
+.ingredient-group {
+    break-inside: avoid;
+    /*  avoid whole block be broken up when split colume */
+}
+
+.validationError {
+    color: crimson;
+    /* float: right; */
+}   
+
+.logout {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: brown
+}
+
+.formclass {
+    text-align: center;
+}
+
+body {
+    background-image: url("/images/TacoCloud.png");
+    background-size: cover;
+    text-align: center;
+}
+
+h1,form {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: greenyellow;
+    left: 200px;
+    top:20px;
+    position: relative;
+
+}

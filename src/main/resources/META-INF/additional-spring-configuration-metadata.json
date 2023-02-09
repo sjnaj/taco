@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "spring.jpa.hibernate.naming.physical.strategy",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.naming.physical.strategy'"
+  },
+  {
+    "name": "taco.orders.page-size",
+    "type": "java.lang.String",
+    "description": "Sets the maximum number of orders to display in a list"
+  }
+]}
